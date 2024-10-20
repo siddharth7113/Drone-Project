@@ -1,0 +1,9 @@
+Project List
+
+1. Led Blinking --------------------------------------- Code Done 
+2. Reading Battery level ------------------------------ Code Done  
+3. Reading Rotation Rate ------------------------------ Code Done 
+4. Gyroscope Calibaration------------------------------ Code Done
+5. Motor Spin Check ( Purely Hardware task)------------ Skipped ( Theory Reviewed)
+6. Recieving Commands ----------------------------------Pending
+7. Battery Managment

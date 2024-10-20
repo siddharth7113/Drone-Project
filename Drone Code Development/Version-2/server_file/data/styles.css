@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .joystick-container {
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .joystick {
+    width: 150px;
+    height: 150px;
+    background-color: #00aaff;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .inner-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .status {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  .inner-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 0.1s, top 0.1s; /* Smooth transition for movement */
+  }
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML><html>
+<head>
+  <title>ESP8266 MPU Control</title>
+  <script>
+  function fetchData() {
+    fetch('/update').then(response => response.json()).then(data => {
+      document.getElementById('roll').innerText = data.roll.toFixed(2);
+      document.getElementById('pitch').innerText = data.pitch.toFixed(2);
+      document.getElementById('yaw').innerText = data.yaw.toFixed(2);
+      setTimeout(fetchData, 100); // update every second
+    });
+  }
+  function sendMotorCommand() {
+    var speed = document.getElementById('speed').value;
+    fetch(`/motor?speed=${speed}`);
+  }
+  window.onload = function () {
+    fetchData(); // Start fetching the data
+  };
+  </script>
+</head>
+<body>
+  <h1>MPU Readings</h1>
+  <p>Roll: <span id="roll">0</span> degrees/s</p>
+  <p>Pitch: <span id="pitch">0</span> degrees/s</p>
+  <p>Yaw: <span id="yaw">0</span> degrees/s</p>
+  <h2>Motor Control</h2>
+  <input type="range" id="speed" min="0" max="1023">
+  <button onclick="sendMotorCommand()">Set Speed</button>
+</body>
+</html>

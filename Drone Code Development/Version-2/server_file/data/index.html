@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Control Interface</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Drone Control Interface</h1>
+    
+    <!-- Buttons for starting and calibrating the drone -->
+    <div class="controls">
+      <button id="startButton">Start Drone</button>
+      <button id="calibrateButton">Calibrate Drone</button>
+    </div>
+    
+    <!-- Joystick control for movement (forward, backward, left, right) -->
+    <div class="joystick-container">
+      <div class="joystick" id="moveJoystick">
+        <div class="inner-circle"></div>
+      </div>
+      <p>Movement Control</p>
+    </div>
+
+    <!-- Joystick control for altitude and yaw -->
+    <div class="joystick-container">
+      <div class="joystick" id="altitudeJoystick">
+        <div class="inner-circle"></div>
+      </div>
+      <p>Altitude/Yaw Control</p>
+    </div>
+
+    <!-- Display section for status (battery, drone info, etc.) -->
+    <div class="status">
+      <p>Status: <span id="status">Waiting...</span></p>
+      <p>Battery Level: <span id="batteryLevel">0%</span></p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
